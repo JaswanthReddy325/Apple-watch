@@ -1,0 +1,50 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .header .logo {
+    height: 30px;
+    width: 60px;
+  }
+  
+  
+  .content h2 {
+    font-size: 32px;
+    line-height: 1.5;
+    color: #111;
+  }
+  
+  .get-started-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007aff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #0056cc;
+  }
+  
+  .watch-image {
+    margin-top: 10px;
+    max-width: 100%;
+    height: 400px;
+  }
+  .header{
+    background-color: rgb(252, 247, 247);
+    display: flex;
+    justify-content: flex-start;
+
+  }

@@ -1,0 +1,503 @@
+.App {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+button.active {
+  background-color: #007aff;
+  color: #fff;
+}
+.customize-page {
+  padding: 20px;
+}
+
+.case-selection, .size-selection, .band-selection {
+  display: flex;
+  gap: 10px;
+}
+
+.case-item, .size-button, .band-item {
+  cursor: pointer;
+}
+
+.selected {
+  border: 2px solid #0071e3;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+.band-item.selected {
+  border: 2px solid #0071e3; 
+}
+
+.band-color.selected {
+  background-color: #0071e3; 
+  color: white;
+}
+.scroller-image{
+  height: 200px;
+  width: 200px;
+}
+.scroller {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.scroller-items {
+  display: flex; 
+  overflow: hidden; 
+  width: 100%; 
+}
+.scroller-item {
+  margin: 0 10px; 
+  text-align: center;
+}
+
+.scroller-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.scroller-btn {
+  background-color: #0071e3;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.scroller-btn:disabled {
+  background-color: #dcdcdc;
+  cursor: not-allowed;
+}
+
+.watch-options{
+  display: flex;
+  gap: 20px;
+}
+.watch-option{
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+}
+.watch-option.selected{
+  border-color: blue;
+}
+.watch-option img{
+  width: 100px;
+}
+.main-watch-image{
+  width: 200px;
+  display: block;
+  margin: 20px auto;
+}
+.config-options{
+  display: flex;
+  gap: 10px;
+}
+.config-option{
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.config-option.selected{
+  background-color: lightblue;
+}
+.band-options{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.band-option{
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+.band-option img{
+  width: 80px;
+}
+.band-option.selected{
+  border-color: blue;
+}
+.total-price{
+  font-size: 1.2em;
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.watch-options-container {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  overflow: hidden; 
+}
+
+.watch-options {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; 
+  scroll-behavior: smooth; 
+  padding: 10px; 
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1; 
+}
+
+.left-scroll {
+  left: 0;
+}
+
+.right-scroll {
+  right: 0;
+}
+
+
+.watch-options::-webkit-scrollbar {
+  display: none;
+}
+.watch-options {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.option-group {
+  margin-bottom: 20px; 
+}
+
+.option-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.option-choices {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px;
+}
+
+.option-choice {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.option-choice.selected {
+  background-color: lightgray;
+}
+
+.band-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; 
+}
+
+.band-choice {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  width: 100px; 
+  text-align: center;
+}
+
+.band-choice img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 5px; 
+}
+
+.band-choice.selected {
+  border-color: blue;
+}
+.main-image{
+  height: 250px;
+  width: 250px;
+}
+.app-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.options {
+  display: flex;
+ 
+  align-items: center;
+  margin-top: 30px;
+}
+
+.option-group {
+  margin-bottom: 20px;
+  width: 100%; 
+  max-width: 400px; 
+}
+
+.option-title {
+  font-weight: 500;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #eee;
+  transition: background-color 0.2s ease;
+}
+
+.option-title:hover {
+    background-color: #ddd;
+}
+
+.option-choices,
+.band-choices {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.option-choice,
+.band-choice {
+  
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.option-choice:hover,
+.band-choice:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+.option-choice.selected,
+.band-choice.selected {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+}
+
+.band-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  text-align: center;
+}
+
+.band-choice img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 8px;
+  transition: transform 0.2s ease;
+}
+
+.band-choice:hover img {
+    transform: scale(1.05);
+}
+
+.option-title {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  font-weight: 500;
+  margin-bottom: 0px; 
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #eee;
+  transition: background-color 0.2s ease;
+}
+.option-title:hover {
+  background-color: #ddd;
+}
+.option-choices, .band-choices {
+  border: 1px solid #ddd;
+  border-top: none;
+  padding: 10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.slick-slider {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-dots {
+  bottom: -10px;
+}
+
+.slick-prev, .slick-next {
+  z-index: 10;
+}
+select {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.slide {
+  text-align: center;
+}
+
+.slide img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.select-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.select-button:hover {
+  background-color: #0056b3;
+}
+select {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.slide img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.selected {
+  background-color: #007bff;
+  color: white;
+}
+button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+button:hover {
+  background-color: #dcdcdc;
+}
+
+button.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.slide img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+.image-dimensions{
+  height: 250px;
+  width: 230px;
+}
+.slider-container{
+  display: flex;
+}
+.selected-options{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
